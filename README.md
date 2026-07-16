@@ -1,6 +1,6 @@
-# Retiree Group Life Pricer
+# Retiree Life Liability Tool
 
-Python and Streamlit toolkit for pricing retiree group life insurance liabilities under flexible benefit reduction schedules, mortality assumptions, yield curves, and premium runout assumptions.
+Python and Streamlit toolkit for modeling retiree group life insurance liabilities under flexible benefit reduction schedules, mortality assumptions, yield curves, and premium runout assumptions.
 
 ## What It Does
 
@@ -12,6 +12,8 @@ Python and Streamlit toolkit for pricing retiree group life insurance liabilitie
 - Supports custom mortality tables, SOA-style table exports, and improvement scales.
 - Supports arbitrary reduction schedules by attained age, duration, or calendar year.
 - Provides a Streamlit dashboard for uploads, assumption management, results, and exports.
+
+Suggested GitHub repository name: `RetireeLifeLiabilityTool`.
 
 ## Professional Use and ASOP-Oriented Disclosures
 

@@ -30,14 +30,14 @@ from retiree_life_pricer.soa import MP_SCALES, PRI2012_TABLES, load_mp_scale, lo
 from retiree_life_pricer.yield_curve import YieldCurve
 
 
-st.set_page_config(page_title="Retiree Group Life Pricer", layout="wide")
+st.set_page_config(page_title="Retiree Life Liability Tool", layout="wide")
 
 
 ASOP_DISCLOSURES = [
     {
         "area": "Scope and intended use",
         "disclosure": (
-            "This application is a modeling and reporting tool for retiree group life insurance pricing, "
+            "This application is a modeling and reporting tool for retiree group life insurance liability analysis, "
             "liability estimates, projected death benefit cashflows, and premium runout analysis. It is not, "
             "by itself, an actuarial opinion, certification, or complete actuarial communication."
         ),
@@ -188,7 +188,7 @@ def liability_interest_sensitivity(
     )
 
 
-st.title("Retiree Group Life Pricer")
+st.title("Retiree Life Liability Tool")
 
 with st.sidebar:
     pri_options = catalog_options(PRI2012_TABLES)
