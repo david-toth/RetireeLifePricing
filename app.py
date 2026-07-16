@@ -33,6 +33,65 @@ from retiree_life_pricer.yield_curve import YieldCurve
 st.set_page_config(page_title="Retiree Group Life Pricer", layout="wide")
 
 
+ASOP_DISCLOSURES = [
+    {
+        "area": "Scope and intended use",
+        "disclosure": (
+            "This application is a modeling and reporting tool for retiree group life insurance pricing, "
+            "liability estimates, projected death benefit cashflows, and premium runout analysis. It is not, "
+            "by itself, an actuarial opinion, certification, or complete actuarial communication."
+        ),
+    },
+    {
+        "area": "ASOP 6 - Retiree group benefits",
+        "disclosure": (
+            "Results depend on user-selected benefit provisions, reduction schedules, mortality assumptions, "
+            "mortality improvement, discount rates, premium assumptions, and projection timing. The user is "
+            "responsible for determining whether the selected methods and assumptions are appropriate for the "
+            "measurement purpose, population, plan provisions, and applicable accounting or funding basis."
+        ),
+    },
+    {
+        "area": "ASOP 23 - Data quality",
+        "disclosure": (
+            "Participant data, coverage amounts, dates of birth, sex, cohort assignments, premium data, and "
+            "schedule identifiers are supplied by the user. The application performs basic structural validation "
+            "but does not audit source records, reconcile eligibility, confirm plan provisions, or determine "
+            "whether omitted or corrected data would materially affect results."
+        ),
+    },
+    {
+        "area": "ASOP 41 - Actuarial communications",
+        "disclosure": (
+            "Any actuarial communication using these results should identify the principal, assignment, intended "
+            "users, intended purpose, valuation date, data sources, methods, assumptions, limitations, reliance, "
+            "and the extent of review performed by a qualified actuary."
+        ),
+    },
+    {
+        "area": "ASOP 56 - Modeling",
+        "disclosure": (
+            "The model is deterministic and cashflow-based. It does not model stochastic volatility, explicit "
+            "anti-selection, claim adjudication delays, administrative expenses, taxes, capital costs, credibility, "
+            "scenario distributions, or all possible plan administration practices unless the user separately "
+            "reflects those items through inputs or external analysis."
+        ),
+    },
+    {
+        "area": "Limitations",
+        "disclosure": (
+            "Results are sensitive to mortality, improvement, discount, premium, census, and reduction schedule "
+            "inputs. Users should review reasonableness, perform sensitivity testing where appropriate, and retain "
+            "documentation sufficient for the intended actuarial work product."
+        ),
+    },
+]
+
+
+def disclosure_dataframe() -> pd.DataFrame:
+    return pd.DataFrame(ASOP_DISCLOSURES)
+
+
 @st.cache_data(show_spinner=False)
 def parse_uploaded_table(file_name: str, file_bytes: bytes) -> pd.DataFrame:
     buffer = BytesIO(file_bytes)
@@ -473,11 +532,27 @@ with tabs[0]:
                     "liability_sensitivity": interest_sensitivity if interest_sensitivity is not None else pd.DataFrame(),
                     "cohort_assumptions": clean_cohorts,
                     "premium_assumptions": premium_assumptions,
+                    "asop_disclosures": disclosure_dataframe(),
                 }
             ),
             file_name="retiree_group_life_results.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
         )
+
+        with st.expander("Actuarial Disclosures and Reliance"):
+            st.markdown(
+                "These statements are intended to support documentation under ASOPs 6, 23, 41, and 56. "
+                "They do not replace professional judgment or a complete actuarial communication."
+            )
+            st.dataframe(
+                disclosure_dataframe(),
+                column_config={
+                    "area": "Area",
+                    "disclosure": "Disclosure",
+                },
+                hide_index=True,
+                width="stretch",
+            )
 
 with tabs[1]:
     if report_ready():

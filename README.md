@@ -13,6 +13,37 @@ Python and Streamlit toolkit for pricing retiree group life insurance liabilitie
 - Supports arbitrary reduction schedules by attained age, duration, or calendar year.
 - Provides a Streamlit dashboard for uploads, assumption management, results, and exports.
 
+## Professional Use and ASOP-Oriented Disclosures
+
+This project is an actuarial modeling scaffold. It is intended to support analysis and documentation, not to replace professional judgment, peer review, or a complete actuarial communication. A user who relies on this model for actuarial work remains responsible for selecting appropriate assumptions and methods, reviewing data quality, understanding model limitations, and preparing communications suitable for the intended purpose and users.
+
+The application includes disclosure language intended to support documentation under these Actuarial Standards of Practice:
+
+| ASOP | Topic supported by this model documentation |
+| --- | --- |
+| ASOP 6 | Measuring retiree group benefit obligations, including selected benefit provisions, assumptions, methods, projection timing, and reliance on plan provisions |
+| ASOP 23 | Data quality, including reliance on user-supplied census, coverage, premium, cohort, and schedule data |
+| ASOP 41 | Actuarial communications, including intended use, limitations, reliance, assumptions, methods, and responsibility for a complete communication |
+| ASOP 56 | Modeling, including model purpose, inputs, limitations, validation expectations, and appropriate use |
+
+The model does not determine whether an actuarial work product is compliant with any ASOP. The actuary or other qualified user should document, at a minimum:
+
+- The principal, intended users, intended purpose, valuation date, and measurement basis.
+- Data sources, dates received, data adjustments, unresolved data limitations, and reliance on others.
+- Plan provisions, covered population, reduction schedules, premium arrangements, and any known administrative practices reflected or not reflected.
+- Mortality table, mortality improvement, mortality base year, cohort mapping, mortality multipliers, discount basis, premium method, and cashflow timing.
+- Material assumptions or methods not captured directly in the application.
+- Sensitivity tests or reasonableness checks considered necessary for the assignment.
+- Model limitations, known simplifications, and any restrictions on use or distribution.
+
+Important model limitations:
+
+- Projections are deterministic and cashflow-based.
+- Mortality rates are applied using the selected table, selected improvement scale, participant sex, cohort mapping, and UDD for fractional ages.
+- The model does not independently audit eligibility, census completeness, claim history, plan documents, premium contracts, or insurer administration.
+- The model does not explicitly include expenses, taxes, capital costs, stochastic risk distributions, anti-selection, claim adjudication lag, credibility procedures, or reserve margins unless the user reflects them through inputs or external analysis.
+- Results can be materially sensitive to mortality, improvement, discount, coverage, reduction schedule, premium, and data assumptions.
+
 ## Quick Start
 
 ```bash
@@ -144,3 +175,5 @@ Rates are annual effective decimal spot rates. For public curves, the app can in
 ## Notes
 
 This is an actuarial modeling scaffold, not an opinionated valuation standard. Source data licensing, table selection, accounting basis, and audit controls remain user responsibilities.
+
+Use of this tool does not, by itself, create an actuarial opinion or certification. Any actuarial communication based on the outputs should be reviewed and signed, if applicable, by a qualified actuary who has evaluated the data, assumptions, methods, model limitations, and intended use.
