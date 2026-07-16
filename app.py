@@ -263,15 +263,17 @@ with st.sidebar:
     default_premium_end_age = st.number_input("Default premium end age", min_value=0.0, max_value=130.0, value=120.0)
     run_requested = st.button("Run valuation", type="primary", width="stretch")
 
-tabs = st.tabs([
+pages = [
     "Summary",
     "Individual Results",
     "Cashflow Summary",
     "Detailed Liability Results",
     "Stepdown Builder",
-])
+]
+active_page = st.radio("Report view", pages, horizontal=True, label_visibility="collapsed")
 
-participants_df = read_table(participant_file)
+participant_file_present = participant_file is not None
+participants_df = None
 pricing_error = None
 cashflows = None
 summary = None
@@ -281,6 +283,8 @@ annual = None
 total = None
 interest_sensitivity = None
 clean_cohorts = None
+export_bytes = None
+stored_participants = None
 premium_assumptions = pd.DataFrame(
     [
         {
@@ -297,12 +301,13 @@ premium_assumptions = pd.DataFrame(
 )
 
 if run_requested:
-    if participants_df is None:
+    if participant_file is None:
         st.session_state["valuation_error"] = "Upload a participant file before running the valuation."
         st.session_state.pop("valuation_results", None)
     else:
         try:
             with st.spinner("Running valuation..."):
+                participants_df = read_table(participant_file)
                 if mortality_source == "SOA PRI-2012 dropdown":
                     mortality = cached_pri2012_table(pri_options[selected_pri_label])
                 elif mortality_source == "Uploaded table" and mortality_file:
@@ -381,13 +386,36 @@ if run_requested:
                     ["death_benefit_cashflow", "premium_cashflow", "pv_death_benefit", "pv_future_premium"]
                 ].sum()
                 total = summary[["pv_death_benefit", "pv_future_premium", "net_pv_liability"]].sum()
+                cashflow_summary_export = annual_by_cohort.loc[
+                    :,
+                    [
+                        "projection_year",
+                        "calendar_year",
+                        "cohort",
+                        "death_benefit_cashflow",
+                        "premium_cashflow",
+                    ],
+                ]
                 interest_sensitivity = liability_interest_sensitivity(
                     cashflows=cashflows,
                     curve=curve,
                     assumptions=assumptions,
                     shock_bps=100.0,
                 )
+                export_bytes = to_excel_bytes(
+                    {
+                        "summary": summary,
+                        "cashflow_summary": cashflow_summary_export,
+                        "annual_total": annual_total,
+                        "detailed_liability": cashflows,
+                        "liability_sensitivity": interest_sensitivity,
+                        "cohort_assumptions": clean_cohorts,
+                        "premium_assumptions": premium_assumptions,
+                        "disclaimer": disclaimer_dataframe(),
+                    }
+                )
                 st.session_state["valuation_results"] = {
+                    "participants": participants_df,
                     "cashflows": cashflows,
                     "summary": summary,
                     "annual_by_cohort": annual_by_cohort,
@@ -397,6 +425,7 @@ if run_requested:
                     "interest_sensitivity": interest_sensitivity,
                     "clean_cohorts": clean_cohorts,
                     "premium_assumptions": premium_assumptions,
+                    "export_bytes": export_bytes,
                 }
                 st.session_state["valuation_error"] = None
         except Exception as exc:
@@ -405,6 +434,7 @@ if run_requested:
 
 stored_results = st.session_state.get("valuation_results")
 if stored_results is not None:
+    stored_participants = stored_results.get("participants")
     cashflows = stored_results["cashflows"]
     summary = stored_results["summary"]
     annual_by_cohort = stored_results["annual_by_cohort"]
@@ -414,11 +444,12 @@ if stored_results is not None:
     interest_sensitivity = stored_results.get("interest_sensitivity")
     clean_cohorts = stored_results["clean_cohorts"]
     premium_assumptions = stored_results["premium_assumptions"]
+    export_bytes = stored_results.get("export_bytes")
 pricing_error = st.session_state.get("valuation_error")
 
 
 def report_ready() -> bool:
-    if participants_df is None:
+    if not participant_file_present and stored_results is None:
         st.info("Upload a participant file to run a valuation.")
         return False
     if pricing_error is not None:
@@ -430,7 +461,7 @@ def report_ready() -> bool:
     return True
 
 
-with tabs[0]:
+if active_page == "Summary":
     if report_ready():
         st.subheader("Present Values")
         col1, col2, col3, col4 = st.columns(4)
@@ -495,42 +526,25 @@ with tabs[0]:
             width="stretch",
         )
 
-        st.download_button(
-            "Export Results to Excel",
-            data=to_excel_bytes(
-                {
-                    "summary": summary,
-                    "cashflow_summary": annual_by_cohort.loc[
-                        :,
-                        [
-                            "projection_year",
-                            "calendar_year",
-                            "cohort",
-                            "death_benefit_cashflow",
-                            "premium_cashflow",
-                        ],
-                    ],
-                    "annual_total": annual_total,
-                    "detailed_liability": cashflows,
-                    "liability_sensitivity": interest_sensitivity if interest_sensitivity is not None else pd.DataFrame(),
-                    "cohort_assumptions": clean_cohorts,
-                    "premium_assumptions": premium_assumptions,
-                    "disclaimer": disclaimer_dataframe(),
-                }
-            ),
-            file_name="retiree_group_life_results.xlsx",
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        )
+        if export_bytes is None:
+            st.info("Click Run valuation to refresh the Excel export.")
+        else:
+            st.download_button(
+                "Export Results to Excel",
+                data=export_bytes,
+                file_name="retiree_group_life_results.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            )
 
         with st.expander("Disclaimer"):
             st.markdown(disclaimer_markdown())
 
-with tabs[1]:
+if active_page == "Individual Results":
     if report_ready():
         st.subheader("Individual Results")
         st.dataframe(summary, width="stretch")
 
-with tabs[2]:
+if active_page == "Cashflow Summary":
     if report_ready():
         st.subheader("Cashflow Summary")
         cashflow_summary = (
@@ -567,12 +581,12 @@ with tabs[2]:
             width="stretch",
         )
 
-with tabs[3]:
+if active_page == "Detailed Liability Results":
     if report_ready():
         st.subheader("Detailed Liability Results")
         st.dataframe(cashflows, width="stretch")
 
-with tabs[4]:
+if active_page == "Stepdown Builder":
     st.subheader("Reduction Schedule Builder")
 
     col1, col2, col3 = st.columns(3)
@@ -660,7 +674,7 @@ with tabs[4]:
         )
         builder_rule = fixed_percent_by_age_rule(builder_schedule_id, factor_rows)
 
-    candidate_participants = participants_df.copy() if participants_df is not None else None
+    candidate_participants = stored_participants.copy() if stored_participants is not None else None
     use_sample_test_case = (
         candidate_participants is None
         or candidate_participants.empty
