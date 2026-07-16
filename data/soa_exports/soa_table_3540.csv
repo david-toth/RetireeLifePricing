@@ -1,0 +1,87 @@
+Table Name:,Pri-2012 Male Employee Bottom Quartile
+Table Identity:,3540
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-amount.xlsx, Sheet 'Bottom Quartile', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-amount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Male Employee Bottom Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Male Employee Bottom Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",18
+"Row, Column (if applicable)->MaxScaleValue:",80
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+18,0.00078
+19,0.00088
+20,0.00093
+21,0.00094
+22,0.00094
+23,0.00093
+24,0.00092
+25,0.00091
+26,0.0009
+27,0.0009
+28,0.0009
+29,0.00091
+30,0.00092
+31,0.00093
+32,0.00095
+33,0.00097
+34,0.001
+35,0.00103
+36,0.00106
+37,0.0011
+38,0.00114
+39,0.00119
+40,0.00124
+41,0.0013
+42,0.00137
+43,0.00144
+44,0.00153
+45,0.00163
+46,0.00176
+47,0.0019
+48,0.00206
+49,0.00225
+50,0.00246
+51,0.0027
+52,0.00297
+53,0.00326
+54,0.00358
+55,0.00393
+56,0.00431
+57,0.00472
+58,0.00517
+59,0.00566
+60,0.00619
+61,0.00677
+62,0.00739
+63,0.00807
+64,0.00881
+65,0.00961
+66,0.01047
+67,0.0114
+68,0.01242
+69,0.01353
+70,0.01474
+71,0.01606
+72,0.01749
+73,0.01905
+74,0.02076
+75,0.02261
+76,0.02463
+77,0.02683
+78,0.02923
+79,0.03184
+80,0.03468

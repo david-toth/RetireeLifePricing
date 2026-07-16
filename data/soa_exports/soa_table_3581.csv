@@ -1,0 +1,87 @@
+Table Name:,Pri.H-2012 Female Employee Blue Collar
+Table Identity:,3581
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-headcount.xlsx, Sheet 'Blue Collar', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-headcount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Female Employee Blue Collar. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Female Employee Blue Collar. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",18
+"Row, Column (if applicable)->MaxScaleValue:",80
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+18,0.00026
+19,0.00026
+20,0.00026
+21,0.00026
+22,0.00029
+23,0.00032
+24,0.00034
+25,0.00034
+26,0.00034
+27,0.00034
+28,0.00035
+29,0.00036
+30,0.00037
+31,0.00039
+32,0.0004
+33,0.00043
+34,0.00045
+35,0.00048
+36,0.00052
+37,0.00056
+38,0.0006
+39,0.00064
+40,0.00069
+41,0.00074
+42,0.00079
+43,0.00085
+44,0.00092
+45,0.00099
+46,0.00107
+47,0.00116
+48,0.00125
+49,0.00135
+50,0.00146
+51,0.00159
+52,0.00172
+53,0.00186
+54,0.00203
+55,0.0022
+56,0.0024
+57,0.00261
+58,0.00284
+59,0.0031
+60,0.00339
+61,0.00371
+62,0.00406
+63,0.00446
+64,0.00489
+65,0.00537
+66,0.00594
+67,0.00656
+68,0.00725
+69,0.00801
+70,0.00885
+71,0.00978
+72,0.01081
+73,0.01194
+74,0.0132
+75,0.01458
+76,0.01612
+77,0.01781
+78,0.01968
+79,0.02174
+80,0.02403

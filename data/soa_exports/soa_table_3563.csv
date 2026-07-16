@@ -1,0 +1,95 @@
+Table Name:,Pri-2012 Female Nondisabled Annuitant White Collar
+Table Identity:,3563
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-amount.xlsx, Sheet 'Nondisabled Annuitant', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-amount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Female Nondisabled Annuitant White Collar. Ages 50-120. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Female Nondisabled Annuitant White Collar. Ages 50-120. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",50
+"Row, Column (if applicable)->MaxScaleValue:",120
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+50,0.00319
+51,0.00337
+52,0.00351
+53,0.00363
+54,0.00382
+55,0.0038
+56,0.00383
+57,0.00405
+58,0.00435
+59,0.00468
+60,0.00502
+61,0.00546
+62,0.00597
+63,0.00651
+64,0.00711
+65,0.00776
+66,0.00847
+67,0.00927
+68,0.01017
+69,0.01116
+70,0.01229
+71,0.01356
+72,0.01497
+73,0.01659
+74,0.01845
+75,0.02058
+76,0.02299
+77,0.02576
+78,0.02893
+79,0.0325
+80,0.03648
+81,0.04092
+82,0.0459
+83,0.05152
+84,0.05792
+85,0.06523
+86,0.07352
+87,0.08286
+88,0.09331
+89,0.10498
+90,0.118
+91,0.13223
+92,0.14748
+93,0.16264
+94,0.17864
+95,0.19539
+96,0.21279
+97,0.23075
+98,0.24917
+99,0.26794
+100,0.28698
+101,0.30619
+102,0.32549
+103,0.34472
+104,0.36375
+105,0.38243
+106,0.40065
+107,0.41828
+108,0.43522
+109,0.45139
+110,0.46673
+111,0.4812
+112,0.49477
+113,0.5
+114,0.5
+115,0.5
+116,0.5
+117,0.5
+118,0.5
+119,0.5
+120,1

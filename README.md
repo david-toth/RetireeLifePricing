@@ -89,6 +89,21 @@ The dashboard includes dropdowns for sex-specific SOA MORT table pairs:
 - PRI-2012 juvenile tables
 - MP-2014 through MP-2021 improvement scales
 
+The app reads SOA exports from `data/soa_exports` first. If a CSV is missing, it attempts to download it from `https://mort.soa.org` and saves it to that folder. This lets cloned copies run without live SOA downloads once the cache is populated.
+
+To populate or refresh the local SOA cache:
+
+```bash
+source .venv/bin/activate
+python scripts/cache_soa_tables.py
+```
+
+If a corporate certificate setup causes SSL verification failures while populating the cache, you can use this only for controlled one-time cache population:
+
+```bash
+RETIREE_LIFE_SOA_SSL_VERIFY=false python scripts/cache_soa_tables.py
+```
+
 The app uses the SOA table identity for the participant sex: female participants use the female table identity and male participants use the male table identity. Cohorts can each select a different PRI-2012 base table, so a `union` cohort can use a different sex-specific base table pair than a `non-union` cohort. Custom uploaded mortality and improvement files remain available for locked-down production workflows.
 
 Gender is always mapped from the participant `sex` field to the gender-specific base table. Cohort-level mortality multipliers can be entered in the dashboard and applied through the participant `cohort` column.

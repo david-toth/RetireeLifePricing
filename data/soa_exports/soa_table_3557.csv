@@ -1,0 +1,95 @@
+Table Name:,Pri-2012 Female Contingent Survivor White Collar
+Table Identity:,3557
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-amount.xlsx, Sheet 'White Collar', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-amount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Female Contingent Survivor White Collar. Ages 50-120. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Female Contingent Survivor White Collar. Ages 50-120. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",50
+"Row, Column (if applicable)->MaxScaleValue:",120
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+50,0.00494
+51,0.00519
+52,0.00547
+53,0.00577
+54,0.00608
+55,0.00642
+56,0.00679
+57,0.00718
+58,0.0076
+59,0.00805
+60,0.00853
+61,0.00893
+62,0.00937
+63,0.00984
+64,0.01036
+65,0.01094
+66,0.01158
+67,0.0123
+68,0.01311
+69,0.01402
+70,0.01505
+71,0.01622
+72,0.01756
+73,0.0191
+74,0.02087
+75,0.02293
+76,0.02531
+77,0.02806
+78,0.03119
+79,0.03469
+80,0.03853
+81,0.04276
+82,0.04748
+83,0.05285
+84,0.05907
+85,0.06627
+86,0.07451
+87,0.08381
+88,0.09417
+89,0.10564
+90,0.11827
+91,0.13223
+92,0.14748
+93,0.16264
+94,0.17864
+95,0.19539
+96,0.21279
+97,0.23075
+98,0.24917
+99,0.26794
+100,0.28698
+101,0.30619
+102,0.32549
+103,0.34472
+104,0.36375
+105,0.38243
+106,0.40065
+107,0.41828
+108,0.43522
+109,0.45139
+110,0.46673
+111,0.4812
+112,0.49477
+113,0.5
+114,0.5
+115,0.5
+116,0.5
+117,0.5
+118,0.5
+119,0.5
+120,1

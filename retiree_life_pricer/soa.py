@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import csv
+import os
 from dataclasses import dataclass
 from html import unescape
 from io import StringIO
+from pathlib import Path
+import warnings
 
 import pandas as pd
 import requests
@@ -13,6 +16,8 @@ from .mortality import ImprovementScale, MortalityTable
 
 SOA_EXPORT_URL = "https://mort.soa.org/Export.aspx?Type=csv&TableIdentity={table_id}"
 SOA_SEARCH_URL = "https://mort.soa.org/WebService.asmx/GetListOfTables"
+DEFAULT_SOA_EXPORT_DIR = Path(__file__).resolve().parent.parent / "data" / "soa_exports"
+SOA_SSL_VERIFY_ENV = "RETIREE_LIFE_SOA_SSL_VERIFY"
 
 
 @dataclass(frozen=True)
@@ -101,10 +106,59 @@ def export_url(table_id: int) -> str:
     return SOA_EXPORT_URL.format(table_id=table_id)
 
 
-def download_soa_csv(table_id: int) -> str:
-    response = requests.get(export_url(table_id), timeout=30)
+def _ssl_verify_setting() -> bool:
+    value = os.getenv(SOA_SSL_VERIFY_ENV, "true").strip().lower()
+    return value not in {"0", "false", "no", "off"}
+
+
+def _cache_path(table_id: int, cache_dir: str | Path | None = None) -> Path:
+    directory = Path(cache_dir) if cache_dir is not None else DEFAULT_SOA_EXPORT_DIR
+    return directory / f"soa_table_{int(table_id)}.csv"
+
+
+def download_soa_csv(table_id: int, verify_ssl: bool | None = None) -> str:
+    verify = _ssl_verify_setting() if verify_ssl is None else bool(verify_ssl)
+    if not verify:
+        warnings.warn(
+            "SOA SSL verification is disabled. Use this only for controlled one-time cache population.",
+            RuntimeWarning,
+            stacklevel=2,
+        )
+    response = requests.get(export_url(table_id), timeout=30, verify=verify)
     response.raise_for_status()
     return response.text
+
+
+def load_soa_csv(table_id: int, cache_dir: str | Path | None = None) -> str:
+    path = _cache_path(table_id, cache_dir)
+    if path.exists():
+        return path.read_text(encoding="utf-8")
+
+    try:
+        text = download_soa_csv(table_id)
+    except requests.RequestException as exc:
+        raise RuntimeError(
+            f"SOA table {table_id} is not available in the local cache at {path}, and the download failed. "
+            "Populate data/soa_exports from a machine that can reach https://mort.soa.org, or set "
+            "RETIREE_LIFE_SOA_SSL_VERIFY=false only for a controlled one-time cache population if your "
+            "certificate environment requires it."
+        ) from exc
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+    return text
+
+
+def cache_catalog_exports(cache_dir: str | Path | None = None) -> list[Path]:
+    paths = []
+    table_ids = {
+        table_id
+        for selection in [*PRI2012_TABLES.values(), *MP_SCALES.values()]
+        for table_id in [selection.female_table_id, selection.male_table_id]
+    }
+    for table_id in sorted(table_ids):
+        load_soa_csv(table_id, cache_dir=cache_dir)
+        paths.append(_cache_path(table_id, cache_dir))
+    return paths
 
 
 def _data_rows(text: str) -> list[list[str]]:
@@ -159,18 +213,17 @@ def parse_improvement_export(text: str, sex: str) -> pd.DataFrame:
 
 def load_pri2012_table(key: str) -> MortalityTable:
     selection = PRI2012_TABLES[key]
-    female = parse_mortality_export(download_soa_csv(selection.female_table_id), "F")
-    male = parse_mortality_export(download_soa_csv(selection.male_table_id), "M")
+    female = parse_mortality_export(load_soa_csv(selection.female_table_id), "F")
+    male = parse_mortality_export(load_soa_csv(selection.male_table_id), "M")
     return MortalityTable(pd.concat([female, male], ignore_index=True), name=selection.label)
 
 
 def load_mp_scale(key: str) -> ImprovementScale:
     selection = MP_SCALES[key]
-    female = parse_improvement_export(download_soa_csv(selection.female_table_id), "F")
-    male = parse_improvement_export(download_soa_csv(selection.male_table_id), "M")
+    female = parse_improvement_export(load_soa_csv(selection.female_table_id), "F")
+    male = parse_improvement_export(load_soa_csv(selection.male_table_id), "M")
     return ImprovementScale(pd.concat([female, male], ignore_index=True), name=selection.label)
 
 
 def clean_soa_table_name(value: str) -> str:
     return unescape(value).replace("\xa0", " ").replace("<br/>", " - ")
-

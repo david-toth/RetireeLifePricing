@@ -1,0 +1,87 @@
+Table Name:,Pri-2012 Male Employee White Collar
+Table Identity:,3554
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-amount.xlsx, Sheet 'White Collar', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-amount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Male Employee White Collar. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Male Employee White Collar. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",18
+"Row, Column (if applicable)->MaxScaleValue:",80
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+18,0.00036
+19,0.00041
+20,0.00043
+21,0.00044
+22,0.00043
+23,0.00043
+24,0.00043
+25,0.00042
+26,0.00042
+27,0.00042
+28,0.00042
+29,0.00042
+30,0.00042
+31,0.00043
+32,0.00044
+33,0.00045
+34,0.00046
+35,0.00047
+36,0.00049
+37,0.00051
+38,0.00053
+39,0.00055
+40,0.00057
+41,0.0006
+42,0.00063
+43,0.00067
+44,0.00071
+45,0.00076
+46,0.00081
+47,0.00088
+48,0.00095
+49,0.00104
+50,0.00114
+51,0.00125
+52,0.00137
+53,0.00151
+54,0.00166
+55,0.00182
+56,0.00199
+57,0.00219
+58,0.0024
+59,0.00262
+60,0.00287
+61,0.00313
+62,0.00342
+63,0.00374
+64,0.00408
+65,0.00445
+66,0.00497
+67,0.00556
+68,0.00621
+69,0.00695
+70,0.00777
+71,0.00868
+72,0.00971
+73,0.01085
+74,0.01213
+75,0.01356
+76,0.01516
+77,0.01694
+78,0.01894
+79,0.02118
+80,0.02367

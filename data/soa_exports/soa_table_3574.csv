@@ -1,0 +1,87 @@
+Table Name:,Pri.H-2012 Male Employee Bottom Quartile
+Table Identity:,3574
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Male Employee Bottom Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Male Employee Bottom Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",18
+"Row, Column (if applicable)->MaxScaleValue:",80
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+18,0.00078
+19,0.00088
+20,0.00093
+21,0.00094
+22,0.00094
+23,0.00093
+24,0.00092
+25,0.00091
+26,0.00091
+27,0.00091
+28,0.00091
+29,0.00093
+30,0.00095
+31,0.00097
+32,0.001
+33,0.00103
+34,0.00107
+35,0.00111
+36,0.00115
+37,0.0012
+38,0.00125
+39,0.00131
+40,0.00137
+41,0.00144
+42,0.00152
+43,0.00161
+44,0.00171
+45,0.00183
+46,0.00196
+47,0.00211
+48,0.00229
+49,0.00248
+50,0.0027
+51,0.00295
+52,0.00322
+53,0.00351
+54,0.00383
+55,0.00418
+56,0.00456
+57,0.00498
+58,0.00543
+59,0.00592
+60,0.00645
+61,0.00703
+62,0.00765
+63,0.00833
+64,0.00907
+65,0.00987
+66,0.01074
+67,0.01169
+68,0.01272
+69,0.01384
+70,0.01506
+71,0.01639
+72,0.01783
+73,0.0194
+74,0.02112
+75,0.02298
+76,0.025
+77,0.02721
+78,0.02961
+79,0.03222
+80,0.03506

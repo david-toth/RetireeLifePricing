@@ -1,0 +1,95 @@
+Table Name:,Pri-2012 Male Retiree Blue Collar
+Table Identity:,3550
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-amount.xlsx, Sheet 'Blue Collar', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-amount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Male Retiree Blue Collar. Ages 50-120. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Male Retiree Blue Collar. Ages 50-120. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",50
+"Row, Column (if applicable)->MaxScaleValue:",120
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+50,0.00488
+51,0.00513
+52,0.00541
+53,0.00571
+54,0.00604
+55,0.0064
+56,0.0069
+57,0.00748
+58,0.00808
+59,0.0087
+60,0.00931
+61,0.00989
+62,0.01048
+63,0.01111
+64,0.01184
+65,0.01272
+66,0.01383
+67,0.01517
+68,0.01675
+69,0.01855
+70,0.02052
+71,0.02263
+72,0.0249
+73,0.02739
+74,0.03016
+75,0.03331
+76,0.03694
+77,0.04111
+78,0.04586
+79,0.05121
+80,0.05717
+81,0.06377
+82,0.07104
+83,0.07908
+84,0.08797
+85,0.09782
+86,0.10875
+87,0.12087
+88,0.13428
+89,0.14907
+90,0.16537
+91,0.18234
+92,0.19949
+93,0.21656
+94,0.23349
+95,0.25039
+96,0.26742
+97,0.28477
+98,0.30262
+99,0.32104
+100,0.33996
+101,0.3591
+102,0.37794
+103,0.39633
+104,0.41415
+105,0.43131
+106,0.44771
+107,0.46329
+108,0.478
+109,0.49181
+110,0.5
+111,0.5
+112,0.5
+113,0.5
+114,0.5
+115,0.5
+116,0.5
+117,0.5
+118,0.5
+119,0.5
+120,1

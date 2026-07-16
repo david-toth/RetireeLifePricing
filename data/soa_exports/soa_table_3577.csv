@@ -1,0 +1,87 @@
+Table Name:,Pri.H-2012 Female Employee Top Quartile
+Table Identity:,3577
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-headcount.xlsx, Sheet 'Top Quartile', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-headcount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Female Employee Top Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Female Employee Top Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",18
+"Row, Column (if applicable)->MaxScaleValue:",80
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+18,0.00013
+19,0.00013
+20,0.00013
+21,0.00013
+22,0.00014
+23,0.00016
+24,0.00017
+25,0.00017
+26,0.00017
+27,0.00017
+28,0.00017
+29,0.00018
+30,0.00018
+31,0.00019
+32,0.0002
+33,0.00021
+34,0.00023
+35,0.00024
+36,0.00026
+37,0.00028
+38,0.0003
+39,0.00032
+40,0.00034
+41,0.00037
+42,0.00039
+43,0.00042
+44,0.00046
+45,0.00049
+46,0.00053
+47,0.00057
+48,0.00062
+49,0.00067
+50,0.00073
+51,0.00079
+52,0.00085
+53,0.00093
+54,0.00101
+55,0.00109
+56,0.00119
+57,0.0013
+58,0.00141
+59,0.00154
+60,0.00169
+61,0.00184
+62,0.00202
+63,0.00221
+64,0.00243
+65,0.00267
+66,0.00302
+67,0.00343
+68,0.00388
+69,0.0044
+70,0.00498
+71,0.00564
+72,0.00639
+73,0.00724
+74,0.00821
+75,0.0093
+76,0.01053
+77,0.01193
+78,0.01352
+79,0.01532
+80,0.01735

@@ -1,0 +1,87 @@
+Table Name:,Pri-2012 Female Employee Bottom Quartile
+Table Identity:,3539
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-amount.xlsx, Sheet 'Bottom Quartile', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-amount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Female Employee Bottom Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Female Employee Bottom Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",18
+"Row, Column (if applicable)->MaxScaleValue:",80
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+18,0.00024
+19,0.00024
+20,0.00024
+21,0.00024
+22,0.00026
+23,0.00028
+24,0.0003
+25,0.0003
+26,0.0003
+27,0.00031
+28,0.00031
+29,0.00032
+30,0.00033
+31,0.00035
+32,0.00036
+33,0.00039
+34,0.00041
+35,0.00045
+36,0.00049
+37,0.00053
+38,0.00057
+39,0.00062
+40,0.00068
+41,0.00073
+42,0.0008
+43,0.00087
+44,0.00094
+45,0.00102
+46,0.00111
+47,0.0012
+48,0.00131
+49,0.00142
+50,0.00154
+51,0.00167
+52,0.00181
+53,0.00196
+54,0.00213
+55,0.00232
+56,0.00252
+57,0.00275
+58,0.00299
+59,0.00324
+60,0.00352
+61,0.00383
+62,0.00416
+63,0.00451
+64,0.0049
+65,0.00532
+66,0.00587
+67,0.00648
+68,0.00715
+69,0.00789
+70,0.00871
+71,0.00961
+72,0.0106
+73,0.01169
+74,0.0129
+75,0.01424
+76,0.01571
+77,0.01733
+78,0.01912
+79,0.0211
+80,0.02328

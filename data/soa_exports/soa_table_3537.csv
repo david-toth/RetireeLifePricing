@@ -1,0 +1,127 @@
+Table Name:,Pri-2012 Female Disabled Retiree
+Table Identity:,3537
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-amount.xlsx, Sheet 'Total Dataset', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-amount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Female Disabled Retiree. Ages 18-120. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Amount-weighted Mortality Table - Female Disabled Retiree. Ages 18-120. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",18
+"Row, Column (if applicable)->MaxScaleValue:",120
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+18,0.00307
+19,0.00307
+20,0.00307
+21,0.00309
+22,0.00335
+23,0.0037
+24,0.00396
+25,0.00395
+26,0.00396
+27,0.00399
+28,0.00405
+29,0.00416
+30,0.0043
+31,0.00449
+32,0.00473
+33,0.00503
+34,0.00539
+35,0.00582
+36,0.00632
+37,0.00686
+38,0.00745
+39,0.00809
+40,0.00879
+41,0.00955
+42,0.01037
+43,0.01126
+44,0.01223
+45,0.01328
+46,0.01329
+47,0.0133
+48,0.01334
+49,0.01342
+50,0.01354
+51,0.0137
+52,0.01389
+53,0.01412
+54,0.0144
+55,0.01472
+56,0.01509
+57,0.01552
+58,0.01599
+59,0.01653
+60,0.01713
+61,0.01779
+62,0.01854
+63,0.01937
+64,0.02029
+65,0.02131
+66,0.02244
+67,0.0237
+68,0.02509
+69,0.02664
+70,0.02836
+71,0.03027
+72,0.0324
+73,0.03477
+74,0.03742
+75,0.04037
+76,0.04368
+77,0.04739
+78,0.05155
+79,0.05622
+80,0.06149
+81,0.06743
+82,0.07414
+83,0.08174
+84,0.09005
+85,0.09867
+86,0.10836
+87,0.11926
+88,0.13155
+89,0.14543
+90,0.16113
+91,0.17646
+92,0.19026
+93,0.20217
+94,0.21247
+95,0.2219
+96,0.23139
+97,0.24197
+98,0.25451
+99,0.26951
+100,0.28698
+101,0.30619
+102,0.32549
+103,0.34472
+104,0.36375
+105,0.38243
+106,0.40065
+107,0.41828
+108,0.43522
+109,0.45139
+110,0.46673
+111,0.4812
+112,0.49477
+113,0.5
+114,0.5
+115,0.5
+116,0.5
+117,0.5
+118,0.5
+119,0.5
+120,1

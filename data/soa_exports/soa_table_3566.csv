@@ -1,0 +1,87 @@
+Table Name:,Pri.H-2012 Male Employee
+Table Identity:,3566
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-headcount.xlsx, Sheet 'Total Dataset', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-headcount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Male Employee. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Male Employee. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",18
+"Row, Column (if applicable)->MaxScaleValue:",80
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+18,0.00053
+19,0.0006
+20,0.00063
+21,0.00064
+22,0.00064
+23,0.00063
+24,0.00063
+25,0.00062
+26,0.00062
+27,0.00062
+28,0.00062
+29,0.00063
+30,0.00064
+31,0.00066
+32,0.00068
+33,0.0007
+34,0.00073
+35,0.00075
+36,0.00078
+37,0.00082
+38,0.00085
+39,0.00089
+40,0.00093
+41,0.00098
+42,0.00104
+43,0.0011
+44,0.00116
+45,0.00124
+46,0.00133
+47,0.00144
+48,0.00156
+49,0.00169
+50,0.00184
+51,0.002
+52,0.00219
+53,0.00239
+54,0.00261
+55,0.00285
+56,0.00311
+57,0.00339
+58,0.00369
+59,0.00403
+60,0.00439
+61,0.00478
+62,0.00521
+63,0.00567
+64,0.00617
+65,0.00672
+66,0.00742
+67,0.0082
+68,0.00906
+69,0.01001
+70,0.01107
+71,0.01223
+72,0.01351
+73,0.01493
+74,0.0165
+75,0.01824
+76,0.02015
+77,0.02227
+78,0.02461
+79,0.0272
+80,0.03005

@@ -1,0 +1,87 @@
+Table Name:,Pri.H-2012 Male Employee Top Quartile
+Table Identity:,3578
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-headcount.xlsx, Sheet 'Top Quartile', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-headcount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Male Employee Top Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Male Employee Top Quartile. Ages 18-80. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",18
+"Row, Column (if applicable)->MaxScaleValue:",80
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+18,0.00036
+19,0.00041
+20,0.00043
+21,0.00044
+22,0.00044
+23,0.00043
+24,0.00043
+25,0.00042
+26,0.00042
+27,0.00042
+28,0.00042
+29,0.00043
+30,0.00044
+31,0.00045
+32,0.00046
+33,0.00048
+34,0.0005
+35,0.00051
+36,0.00053
+37,0.00056
+38,0.00058
+39,0.00061
+40,0.00064
+41,0.00067
+42,0.00071
+43,0.00075
+44,0.0008
+45,0.00085
+46,0.00091
+47,0.00098
+48,0.00106
+49,0.00115
+50,0.00126
+51,0.00137
+52,0.00149
+53,0.00163
+54,0.00178
+55,0.00194
+56,0.00212
+57,0.00231
+58,0.00252
+59,0.00275
+60,0.003
+61,0.00327
+62,0.00356
+63,0.00387
+64,0.00421
+65,0.00459
+66,0.00512
+67,0.00573
+68,0.0064
+69,0.00715
+70,0.00799
+71,0.00893
+72,0.00998
+73,0.01115
+74,0.01246
+75,0.01392
+76,0.01556
+77,0.01738
+78,0.01943
+79,0.02171
+80,0.02426

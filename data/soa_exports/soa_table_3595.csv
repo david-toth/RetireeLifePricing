@@ -1,0 +1,95 @@
+Table Name:,Pri.H-2012 Female Nondisabled Annuitant Blue Collar
+Table Identity:,3595
+Provider Domain:,soa.org
+Provider Name:,Retirement Plans Experience Committee
+Table Reference:,"Society of Actuaries, pri-2012-mort-tables-headcount.xlsx, Sheet 'Nondisabled Annuitant', https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/pri-2012-mort-tables-headcount.xlsx"
+Content Type:,Annuitant Mortality
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Female Nondisabled Annuitant Blue Collar. Ages 50-120. Base Year January 1, 2012 - December 31, 2012."
+EffDate:,
+Comments:,Study Data: The primary focus of this study was a comprehensive review of recent mortality experience of private-sector retirement plans in the United States. The final dataset upon which this study has been based includes approximately 16 million life-years of exposure and 343 thousand deaths from private pension plans across the United States.  Data certified: 05/2019.
+Keywords:,"Aggregate, Annuitant Mortality, United States of America"
+
+Table # ,1
+Table Description:,"Pri-2012 Headcount-weighted Mortality Table - Female Nondisabled Annuitant Blue Collar. Ages 50-120. Base Year January 1, 2012 - December 31, 2012."
+Nation:,United States of America
+Scaling Factor:,0
+Data Type:,Floating Point
+"Row, Column (if applicable)->id:",Age
+"Row, Column (if applicable)->ScaleType:",Age
+"Row, Column (if applicable)->AxisName:",Age
+"Row, Column (if applicable)->MinScaleValue:",50
+"Row, Column (if applicable)->MaxScaleValue:",120
+"Row, Column (if applicable)->Increment:",1
+
+Row\Column,1
+50,0.00768
+51,0.00756
+52,0.00762
+53,0.00776
+54,0.00796
+55,0.00784
+56,0.00774
+57,0.00804
+58,0.00845
+59,0.00894
+60,0.00947
+61,0.0101
+62,0.01072
+63,0.01133
+64,0.01213
+65,0.01295
+66,0.01382
+67,0.01483
+68,0.016
+69,0.0173
+70,0.01874
+71,0.02033
+72,0.02211
+73,0.0241
+74,0.02636
+75,0.02888
+76,0.03169
+77,0.03481
+78,0.03828
+79,0.04213
+80,0.0464
+81,0.05116
+82,0.05645
+83,0.06238
+84,0.06903
+85,0.07648
+86,0.08499
+87,0.09483
+88,0.10562
+89,0.11746
+90,0.13046
+91,0.14412
+92,0.15813
+93,0.1724
+94,0.18693
+95,0.20184
+96,0.2173
+97,0.23346
+98,0.25045
+99,0.26832
+100,0.28698
+101,0.30619
+102,0.32549
+103,0.34472
+104,0.36375
+105,0.38243
+106,0.40065
+107,0.41828
+108,0.43522
+109,0.45139
+110,0.46673
+111,0.4812
+112,0.49477
+113,0.5
+114,0.5
+115,0.5
+116,0.5
+117,0.5
+118,0.5
+119,0.5
+120,1
